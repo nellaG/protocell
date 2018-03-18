@@ -1,0 +1,9 @@
+[package]
+name = "protocell"
+version = "0.1.0"
+authors = ["nellaG <seirios0107@gmail.com>"]
+
+[dependencies]
+rocket = "0.3.6"
+rocket_codegen = "0.3.6"
+clippy = { version = "*", optional = true }
