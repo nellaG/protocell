@@ -18,6 +18,12 @@ fn index() -> &'static str {
 }
 
 
+#[get("/pages/<number>")]
+fn pages(number: usize) -> String {
+    format!("The page number is : {number}", number=number)
+}
+
+
 fn main() {
-    rocket::ignite().mount("/", routes![index, root]).launch();
+    rocket::ignite().mount("/", routes![index, root, pages]).launch();
 }
